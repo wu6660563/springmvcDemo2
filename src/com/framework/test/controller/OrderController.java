@@ -38,8 +38,9 @@ public class OrderController {
 	private OrderService orderService;
 	
 	@RequestMapping(value = "/test", method = RequestMethod.GET)
-	public void test() {
+	public String test() {
 		logger.info("TEST");
+		return "index";
 	}
 	
 	@RequestMapping(value = "/findAll", method = RequestMethod.GET)
