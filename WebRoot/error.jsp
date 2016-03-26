@@ -27,22 +27,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   	</head>
   
   	<body>
-    	SpringMVC Index<br>
-    	<c:forTokens items="s0 s1;s2 s3 s4 s5 s6" delims=" " var="item" begin="1" end="3">
-    		<c:out value="${item}"></c:out>
-    	</c:forTokens><br>
-    	<c:url value="/order/findAll2.jsp"></c:url><br>
-    	<c:url value="order/findAll2.jsp"></c:url><br>
-    	<fmt:formatNumber value="23.1234567" type="currency" currencyCode="USD" currencySymbol="$" maxFractionDigits="4">
-    	</fmt:formatNumber><br>
-    	<fmt:formatNumber value="4567823.1234567" pattern="#,#00.0#">
-    	</fmt:formatNumber><br>
-    	<fmt:formatDate dateStyle="short" type="both" timeStyle="short" value="<%=new Date()%>"/><br>
-    	contains:${fn:contains("HelloWorld", "Hello") }
-    	endsWith:${fn:endsWith("HelloWorld", "World") }
-    	indexOf:${fn:indexOf("1HelloWorld", "Hello")}
-    	startsWith:${fn:startsWith("HelloWorld", "Hello")}
-    	<br>
-    	<spring:message code="name"></spring:message>
+  		错误页面
   	</body>
 </html>

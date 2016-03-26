@@ -8,9 +8,7 @@
  */
 package com.framework.test.controller;
 
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -22,6 +20,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.support.RequestContext;
 
@@ -84,6 +83,7 @@ public class OrderController {
 	@ModelAttribute("list")
 	public List<Order> findAll3() {
 		System.out.println("--------------->findAll3");
+		
 		return orderService.findAll();
 	}
 	

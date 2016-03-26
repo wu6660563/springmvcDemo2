@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app version="2.5" 
+<web-app version="3.0" 
 	xmlns="http://java.sun.com/xml/ns/javaee" 
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
-	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+	http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
 	
 	<!-- 配置启动监听 -->
 	<listener>
@@ -73,6 +73,29 @@
 	<!-- 默认进入页面 -->
     	<welcome-file>index.jsp</welcome-file>
   	</welcome-file-list>
+  	
+  	<!-- error-code Http代码 -->
+  	<error-page>
+  		<error-code>404</error-code>
+  		<location>/404.jsp</location>
+  	</error-page>
+  	<error-page>
+  		<error-code>500</error-code>
+  		<location>/error.jsp</location>
+  	</error-page>
+  	<!-- exception-type 异常类型 -->
+  	<error-page>
+  		<exception-type>java.lang.Exception</exception-type>
+  		<location>/error.jsp</location>
+  	</error-page>
+  	
+  	<!-- local以及编码的映射 -->
+  	<locale-encoding-mapping-list>
+  		<locale-encoding-mapping>
+  			<locale>zh</locale>
+  			<encoding>zh_CN</encoding>
+  		</locale-encoding-mapping>
+  	</locale-encoding-mapping-list>
    	
    	<!-- 配置session超时时间，单位分钟 -->
     <session-config>
