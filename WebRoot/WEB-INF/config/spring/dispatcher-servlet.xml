@@ -24,10 +24,10 @@
     <context:component-scan base-package="com.framework.*" >
     	<context:include-filter type="aspectj" expression="com.framework.*" />
     </context:component-scan>
-
+    
     <!--  annotation默认的方法映射适配器 -->
     <!-- 默认的注解映射的支持 ,它会自动注册DefaultAnnotationHandlerMapping 与AnnotationMethodHandlerAdapter -->  
-    <mvc:annotation-driven >
+    <mvc:annotation-driven>
     	<!-- 解决ResponseBody中文乱码问题 -->
     	<mvc:message-converters register-defaults="true">
 	      	<bean class="org.springframework.http.converter.StringHttpMessageConverter">
@@ -47,9 +47,15 @@
 	-->
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver" p:prefix="/" p:suffix=".jsp"/>
     
-    <!-- 加载静态资源，因为spring只是拦截了*.do的请求 -->
+    <!-- 加载静态资源，因为spring只是拦截了部分的请求 -->
     <mvc:resources mapping="/js/**" location="/js/"/>
     <mvc:resources mapping="/css/**" location="/css/"/>
     
+    <!-- 资源国际化，语言包 -->
+    <bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
+    	<property name="basename" value="messages"/>
+    	<property name="defaultEncoding" value="UTF-8"/> 
+    </bean>
+    <bean id="localeResolver" class="org.springframework.web.servlet.i18n.AcceptHeaderLocaleResolver"></bean>
 	
 </beans>

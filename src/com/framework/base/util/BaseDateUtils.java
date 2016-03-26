@@ -8,6 +8,8 @@
  */
 package com.framework.base.util;
 
+import org.apache.commons.lang.time.DateUtils;
+
 /**
  * @ClassName DateUtil
  * @Description TODO
@@ -15,6 +17,6 @@ package com.framework.base.util;
  * @version 1.0
  * @Date Mar 26, 2016 10:53:49 AM
  */
-public class DateUtils {
+public class BaseDateUtils extends DateUtils {
 
 }

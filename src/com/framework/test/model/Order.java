@@ -9,6 +9,7 @@
 package com.framework.test.model;
 
 import java.io.Serializable;
+import java.sql.Timestamp;
 
 /**
  * @ClassName Order
@@ -57,12 +58,12 @@ public class Order implements Serializable {
 	/**
 	 * @Fields creatTime 创建时间
 	 */
-	private String creat_time;
+	private Timestamp create_time;
 	
 	/**
 	 * @Fields modifyTime 修改时间
 	 */
-	private String modify_time;
+	private Timestamp modify_time;
 
 	/**
 	 * @return id
@@ -155,24 +156,24 @@ public class Order implements Serializable {
 	}
 
 	/**
-	 * @return creat_time
+	 * @return create_time
 	 */
-	public String getCreat_time() {
-		return creat_time;
+	public Timestamp getCreate_time() {
+		return create_time;
 	}
 
 	/**
-	 * @param creat_time
-	 * creat_time
+	 * @param create_time
+	 * create_time
 	 */
-	public void setCreat_time(String creat_time) {
-		this.creat_time = creat_time;
+	public void setCreate_time(Timestamp create_time) {
+		this.create_time = create_time;
 	}
 
 	/**
 	 * @return modify_time
 	 */
-	public String getModify_time() {
+	public Timestamp getModify_time() {
 		return modify_time;
 	}
 
@@ -180,10 +181,8 @@ public class Order implements Serializable {
 	 * @param modify_time
 	 * modify_time
 	 */
-	public void setModify_time(String modify_time) {
+	public void setModify_time(Timestamp modify_time) {
 		this.modify_time = modify_time;
 	}
-
-	
 
 }

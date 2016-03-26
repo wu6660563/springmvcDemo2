@@ -73,27 +73,6 @@
 	<!-- 默认进入页面 -->
     	<welcome-file>index.jsp</welcome-file>
   	</welcome-file-list>
-  	
-  	<!-- jstl标签支持 -->
-  	<jsp-config> 
-	   	<taglib> 
-	    	<taglib-uri>http://java.sun.com/jsp/jstl/core</taglib-uri> 
-	    	<taglib-location>/WEB-INF/jstl/c.tld</taglib-location> 
-	   	</taglib>
-	   
-	   	<taglib> 
-	    	<taglib-uri>http://java.sun.com/jsp/jstl/fmt</taglib-uri> 
-	    	<taglib-location>/WEB-INF/jstl/fmt.tld</taglib-location> 
-	   	</taglib> 
-       	<taglib> 
-	    	<taglib-uri>http://www.springframework.org/tags/form</taglib-uri> 
-	    	<taglib-location>/WEB-INF/jstl/spring-form.tld</taglib-location> 
-	   	</taglib>
-	   	<taglib> 
-	    	<taglib-uri>http://www.springframework.org/tags</taglib-uri> 
-	    	<taglib-location>/WEB-INF/jstl/spring.tld</taglib-location> 
-	   	</taglib>
-   	</jsp-config>
    	
    	<!-- 配置session超时时间，单位分钟 -->
     <session-config>

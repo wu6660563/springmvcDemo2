@@ -8,6 +8,8 @@
  */
 package com.framework.base.util;
 
+import org.apache.commons.lang.StringUtils;
+
 /**
  * @ClassName StringUtils
  * @Description TODO
@@ -15,6 +17,6 @@ package com.framework.base.util;
  * @version 1.0
  * @Date Mar 26, 2016 10:54:29 AM
  */
-public class StringUtils {
+public class BaseStringUtils extends StringUtils {
 
 }
