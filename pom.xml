@@ -156,11 +156,14 @@
 			<version>5.1.38</version>
 		</dependency>
 
+		<!-- 阿里巴巴连接池，现在暂未用到 -->
+		<!-- 
 		<dependency>
 			<groupId>com.alibaba</groupId>
 			<artifactId>druid</artifactId>
 			<version>1.0.17</version>
 		</dependency>
+		 -->
 
 		<dependency>
 			<groupId>org.aspectj</groupId>

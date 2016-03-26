@@ -1,23 +1,23 @@
 /**
  *
- * @Title BaseMapper.java
- * @Package com.framework.base.mapper
+ * @Title BaseService.java
+ * @Package com.framework.base.service
  * @Description TODO
- * @Date Mar 24, 2016 10:00:47 PM
+ * @Date Mar 26, 2016 11:01:20 AM
  * @version 1.0
  */
-package com.framework.base.mapper;
+package com.framework.base.service;
 
 import java.util.List;
 
 /**
- * @ClassName BaseMapper
+ * @ClassName BaseService
  * @Description TODO
  * @author Nick
  * @version 1.0
- * @Date Mar 24, 2016 10:00:47 PM
+ * @Date Mar 26, 2016 11:01:20 AM
  */
-public interface BaseMapper<T> {
+public interface BaseService<T> {
 
 	/**
 	 * 增加
@@ -54,6 +54,6 @@ public interface BaseMapper<T> {
 	 * @return
 	 */
 	public T getLastObject();
-	
+
 
 }
