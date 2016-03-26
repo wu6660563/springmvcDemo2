@@ -38,9 +38,15 @@ public class OrderController {
 	private OrderService orderService;
 	
 	@RequestMapping(value = "/test", method = RequestMethod.GET)
-	public String test() {
+	public @ResponseBody String test() {
 		logger.info("TEST");
-		return "index";
+		return "测试中午乱码问题";
+	}
+	
+	@RequestMapping(value = "/test2", method = RequestMethod.GET)
+	public @ResponseBody String test2() {
+		logger.info("TEST");
+		return "测试中午乱码问题";
 	}
 	
 	@RequestMapping(value = "/findAll", method = RequestMethod.GET)

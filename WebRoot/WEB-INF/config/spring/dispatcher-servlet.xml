@@ -19,28 +19,6 @@
            http://www.springframework.org/schema/mvc      
            http://www.springframework.org/schema/mvc/spring-mvc.xsd">
     
-    
-    <!-- 处理乱码 -->
-    <bean  
-    class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">  
-	    <property name="messageConverters">  
-	        <list>  
-	            <bean  
-	                class="org.springframework.http.converter.StringHttpMessageConverter">  
-	                <property name="supportedMediaTypes">  
-	                    <list>  
-	                        <bean class="org.springframework.http.MediaType">
-	                            <constructor-arg index="0" value="text" />  
-	                            <constructor-arg index="1" value="plain" />  
-	                            <constructor-arg index="2" value="UTF-8" />  
-	                        </bean>  
-	                    </list>  
-	                </property>  
-	            </bean>
-	            
-	        </list>  
-	    </property>  
-	</bean>
    
     <!-- 框架控制层 controller--> <!-- 注解探测器 -->
     <context:component-scan base-package="com.framework.*" >
@@ -49,7 +27,14 @@
 
     <!--  annotation默认的方法映射适配器 -->
     <!-- 默认的注解映射的支持 ,它会自动注册DefaultAnnotationHandlerMapping 与AnnotationMethodHandlerAdapter -->  
-    <mvc:annotation-driven />
+    <mvc:annotation-driven >
+    	<!-- 解决ResponseBody中文乱码问题 -->
+    	<mvc:message-converters register-defaults="true">
+	      	<bean class="org.springframework.http.converter.StringHttpMessageConverter">
+	        	<property name="supportedMediaTypes" value="text/html;charset=UTF-8"/>
+	      	</bean>
+	    </mvc:message-converters>
+    </mvc:annotation-driven>
     
     <!-- 支持标注 -->
     <context:annotation-config />
